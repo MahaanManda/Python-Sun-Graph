@@ -14,10 +14,12 @@ shade_brightness = df_sorted['shade_brightness']
 temp_sun = df_sorted['temp_sun']
 temp_shade = df_sorted['temp_shade']
 
+# Specify the size of the markers
+marker_size = 1
 
-#plot the data
-plt.plot(temp_sun, full_sun_brightness, label='Full Sun Brightness', linestyle='--')
-plt.plot(temp_shade, shade_brightness, label='Shade Sun Brightness', linestyle='--')
+# Plot the data using scatter plot with reduced marker size
+plt.scatter(temp_sun, full_sun_brightness, label='Full Sun Brightness', marker='o', s=marker_size)
+plt.scatter(temp_shade, shade_brightness, label='Shade Sun Brightness', marker='o', s=marker_size)
 
 ##label the axes
 plt.xlabel('Temperature')
